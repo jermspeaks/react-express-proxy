@@ -2,16 +2,26 @@
   "name": "react-express-proxy",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "path": "^0.12.7",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:dev-server": "nodemon server/index.js",
+    "start:dev": "react-scripts start",
+    "start:prod": "node server/index.js",
+    "start": "npm-run-all --parallel start:dev start:dev-server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3",
+    "npm-run-all": "^4.1.3"
   }
 }
