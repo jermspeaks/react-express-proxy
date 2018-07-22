@@ -4,6 +4,7 @@
 
 1. Create React App
 1. Server Setup
+1. Ejecting Creat React App
 1. Component setup
 1. Hookup REST API through Redux Thunk
 
