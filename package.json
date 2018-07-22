@@ -12,13 +12,13 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start:dev-server": "nodemon server/index.js",
-    "start:dev": "react-scripts start",
-    "start:prod": "node server/index.js",
-    "start": "npm-run-all --parallel start:dev start:dev-server",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:dev-server": "nodemon server.js",
+    "start:dev": "react-scripts start",
+    "start:prod": "node server.js",
+    "start": "npm-run-all --parallel start:dev start:dev-server",
+    "test": "react-scripts test --env=jsdom"
   },
   "devDependencies": {
     "nodemon": "^1.18.3",

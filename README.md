@@ -4,7 +4,6 @@
 
 1. Create React App
 1. Server Setup
-1. Express through port
 1. Component setup
 1. Hookup REST API through Redux Thunk
 
@@ -24,6 +23,10 @@ UNIX cmds and other bash/zsh thingys and other apps and shit
 - Atomic Design by Brad Frost http://atomicdesign.bradfrost.com/
 - React starter kit based on Atomic Design https://github.com/diegohaz/arc
 - yarn commands
+- Docker and Kubernetes (k8)
+- Heroku https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
+- CSS in JS
+- React Unit Testing
 
 ## Knowledge Dump
 
@@ -42,7 +45,35 @@ _Server Setup_
   - dev scripts
     - npm-run-all
   - Prod script
+- Setup Docker
+  - Install docker on local machine: https://docs.docker.com/install/
 
 _Why do we use `Webpack Dev Server` and `Express` for development?_
 
 We need express to do any hookups with APIs. In production, we use express to serve the application. Webpack dev server is only for local development. It detects diffs in our project and re-builds it, which Express can't do. We also have set-up react-hot-loader to re-render only the components that have changed. 
+
+_What is Docker?_
+
+Uh....
+
+```bash
+docker images # Lists docker images
+# REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+# <none>              <none>              fbe5e7e6f00e        30 seconds ago      804MB
+docker create fbe5e7e6f00e # Creates docker image
+# 91a83a81ce6944d730892f1e4e740242c96c265246e185f3182627cd5bda9b9b
+docker start 91a83a81ce6944d730892f1e4e740242c96c265246e185f3182627cd5bda9b9b # starts the container
+```
+
+_Why boilerplates?_
+
+Configuring React apps are hard, confusing, misleading, and all around hair tearingly bad. Create React App came about because a small team at Facebook saw a lot of developers were having trouble setting up their project end-to-end, which means lower developer happiness and usage. To mitigate some of this stress, the team set out to write one boilerplate to rule them all. Hence their philosophy.
+
+> One Dependency: There is just one build dependency. It uses Webpack, Babel, ESLint, and other amazing projects, but provides a cohesive curated experience on top of them.
+
+> No Configuration Required: You don't need to configure anything. Reasonably good configuration of both development and production builds is handled for you so you can focus on writing code.
+
+> No Lock-In: You can “eject” to a custom setup at any time. Run a single command, and all the configuration and build dependencies will be moved directly into your project, so you can pick up right where you left off.
+
+### Patterns in creating a full stack project with React
+
