@@ -9,11 +9,19 @@
 
 ## Maybe if we have time
 
+- How do I break up components?
 - Webpack 4 upgrade (zero configuration)
-- Hookup REST API through Redux Saga
-- Hookup GraphQL API through Redux Saga
+- Routing (w/ React Router)
+- REST API - Redux Thunk
+- REST API - Redux Saga
+- GraphQL setup
+- Redux Form
 - Styled Components
 - Babel (transpiler)
+- Redux - State Manager
+- [React Concepts] Context API
+- [React Concepts] Fragments
+- Form elements - controlled vs uncontrolled
 
 UNIX cmds and other bash/zsh thingys and other apps and shit
 - cat / more
@@ -27,6 +35,12 @@ UNIX cmds and other bash/zsh thingys and other apps and shit
 - Heroku https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
 - CSS in JS
 - React Unit Testing
+- Renovate https://renovatebot.com/
+- Compatibility Table: https://kangax.github.io/compat-table/es6/
+- Prettier (code formatter)
+- [Design pattern] Unidirectional data flow
+- [Messaging] Pub/Sub https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
+- [React Concept] Unidirectional data flow
 
 ## Knowledge Dump
 
@@ -75,5 +89,25 @@ Configuring React apps are hard, confusing, misleading, and all around hair tear
 
 > No Lock-In: You can “eject” to a custom setup at any time. Run a single command, and all the configuration and build dependencies will be moved directly into your project, so you can pick up right where you left off.
 
-### Patterns in creating a full stack project with React
+_Why use webpack?_
 
+You can totally not use webpack! Webpack is more for bundling if you're using special javascript files, css preprocessor, languages that transpile to javascript, (ES6) babel transformations, and more things. There are alternatives to webpack, of course. To name a few, `browserify`, `gulp`, `grunt`, I think there's some other stupid names ones like `broccoli` and `brunch`. 
+
+_What's a design system / manual?_
+
+Uh...
+
+_How does React Architecture compared to other front-end libraries/frameworks?_
+
+- Retrieving values from form elements
+- Persistent Data Locally
+- Persistent Data to a server
+- Building Components
+  - Pure Components Pattern
+  - Managing component props and state
+  - Where to keep certain logic
+  - Data Flow between components
+
+_How do I introduce authentication?_
+
+Uh...
