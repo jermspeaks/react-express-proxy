@@ -96,7 +96,9 @@ You can totally not use webpack! Webpack is more for bundling if you're using sp
 
 _What's a design system / manual?_
 
-Uh...
+A design manual is an outline or blueprint for designing all assets. Everything from letterheads, email signatures, to signage. In web design, this is the breakdown of all web elements on the page. 
+
+We can use a methodology like BEM, SMACSS, and other methodologies to organize reusable components of a website. That means breaking elements down to its most fundamental and describing its variations. In many of my recent projects, I've used atomic design to organize with an inherent hierarchy: atoms, molecules, organisms, templates, and pages. With React and other front-end libraries and frameworks, you can use [storybook](https://storybook.js.org/) to organize how each design element is used.
 
 _How does React Architecture compared to other front-end libraries/frameworks?_
 
@@ -111,4 +113,8 @@ _How does React Architecture compared to other front-end libraries/frameworks?_
 
 _How do I introduce authentication?_
 
-Uh...
+Authentication requires routing. There are numerous ways of implementing security, and each has its drawbacks. For example, you can use OAuth to sign your users in with an OAuth provider. Then you have to think of session storage, tokens, cookies, or some way of persisting user information in a secure way from the front-end to talk back to the server with.
+
+In previous React apps, I've used cookies, a JWT, a hash key, and other methods to store this with a login call. There's also another call if a token is available to assume the user is authenticated and start calling APIs. When a 401 status code comes back, we automatically log the user out.
+
+A system to call APIs must already be in place before authentication can be done.
